@@ -6,8 +6,12 @@
 package gui;
 
 import java.awt.Image;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import javax.xml.parsers.ParserConfigurationException;
+import xml.xmlCreator;
 
 /**
  *
@@ -32,8 +36,7 @@ public class VerwaltungGUI extends javax.swing.JFrame
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         paOben = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -41,10 +44,10 @@ public class VerwaltungGUI extends javax.swing.JFrame
         spMainPane = new javax.swing.JSplitPane();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTree1 = new javax.swing.JTree();
+        treeModule = new javax.swing.JTree();
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        btModulAdd = new javax.swing.JButton();
+        btExportieren = new javax.swing.JButton();
         paLogo = new javax.swing.JPanel();
         laLogo = new javax.swing.JLabel();
 
@@ -79,18 +82,28 @@ public class VerwaltungGUI extends javax.swing.JFrame
         treeNode1.add(treeNode2);
         treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Material");
         treeNode1.add(treeNode2);
-        jTree1.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
-        jScrollPane1.setViewportView(jTree1);
+        treeModule.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jScrollPane1.setViewportView(treeModule);
 
         jPanel3.add(jScrollPane1, java.awt.BorderLayout.CENTER);
 
         jPanel1.setLayout(new java.awt.GridLayout(2, 0));
 
-        jButton1.setText("Modul Hinzufügen & Importieren");
-        jPanel1.add(jButton1);
+        btModulAdd.setText("Modul Hinzufügen & Importieren");
+        btModulAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btModulAddActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btModulAdd);
 
-        jButton3.setText("Exportieren");
-        jPanel1.add(jButton3);
+        btExportieren.setText("Exportieren");
+        btExportieren.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btExportierenActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btExportieren);
 
         jPanel3.add(jPanel1, java.awt.BorderLayout.SOUTH);
 
@@ -110,6 +123,19 @@ public class VerwaltungGUI extends javax.swing.JFrame
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btModulAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btModulAddActionPerformed
+        
+    }//GEN-LAST:event_btModulAddActionPerformed
+
+    private void btExportierenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExportierenActionPerformed
+//        try {
+            System.out.println(treeModule.getSelectionPath().toString());
+            //xmlCreator.createXMLFile(treeModule.getSelectionPath().toString());
+//        } catch (ParserConfigurationException ex) {
+//            Logger.getLogger(VerwaltungGUI.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+    }//GEN-LAST:event_btExportierenActionPerformed
 
     /**
      * @param args the command line arguments
@@ -157,17 +183,17 @@ public class VerwaltungGUI extends javax.swing.JFrame
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton btExportieren;
+    private javax.swing.JButton btModulAdd;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTree jTree1;
     private javax.swing.JLabel laLogo;
     private javax.swing.JPanel paLogo;
     private javax.swing.JPanel paMitte;
     private javax.swing.JPanel paOben;
     private javax.swing.JSplitPane spMainPane;
+    private javax.swing.JTree treeModule;
     // End of variables declaration//GEN-END:variables
 }

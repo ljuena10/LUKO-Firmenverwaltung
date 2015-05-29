@@ -105,7 +105,7 @@
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTree" name="jTree1">
+                    <Component class="javax.swing.JTree" name="treeModule">
                       <Properties>
                         <Property name="model" type="javax.swing.tree.TreeModel" editor="org.netbeans.modules.form.editors2.TreeModelEditor">
                           <TreeModel code="Module&#xa; Kunden&#xa; Mitarbeiter&#xa; Bestellungen&#xa; Material"/>
@@ -126,15 +126,21 @@
                     <Property name="rows" type="int" value="2"/>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JButton" name="jButton1">
+                    <Component class="javax.swing.JButton" name="btModulAdd">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Modul Hinzuf&#xfc;gen &amp; Importieren"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btModulAddActionPerformed"/>
+                      </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton3">
+                    <Component class="javax.swing.JButton" name="btExportieren">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Exportieren"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btExportierenActionPerformed"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
