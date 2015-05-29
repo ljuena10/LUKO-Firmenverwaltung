@@ -44,7 +44,6 @@ public class VerwaltungGUI extends javax.swing.JFrame
         jTree1 = new javax.swing.JTree();
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         paLogo = new javax.swing.JPanel();
         laLogo = new javax.swing.JLabel();
@@ -85,13 +84,10 @@ public class VerwaltungGUI extends javax.swing.JFrame
 
         jPanel3.add(jScrollPane1, java.awt.BorderLayout.CENTER);
 
-        jPanel1.setLayout(new java.awt.GridLayout(3, 0));
+        jPanel1.setLayout(new java.awt.GridLayout(2, 0));
 
-        jButton1.setText("Modul Hinzufügen");
+        jButton1.setText("Modul Hinzufügen & Importieren");
         jPanel1.add(jButton1);
-
-        jButton2.setText("Importieren");
-        jPanel1.add(jButton2);
 
         jButton3.setText("Exportieren");
         jPanel1.add(jButton3);
@@ -162,7 +158,6 @@ public class VerwaltungGUI extends javax.swing.JFrame
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;

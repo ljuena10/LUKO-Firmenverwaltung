@@ -7,10 +7,12 @@ package xml;
 
 import beans.Adresse;
 import beans.Person;
+import java.io.File;
 import java.util.Date;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
 
 /**
  *
@@ -32,6 +34,12 @@ public class XMLKonverter
             Marshaller marsh = context.createMarshaller();
             marsh.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
             marsh.marshal(p, System.out);
+            String xmlPath = System.getProperty("user.dir")
+                    +File.separator+"src"
+                    +File.separator+"xml"
+                    +File.separator+"Student.xml";
+            Unmarshaller unmarsh = JAXBContext.newInstance(xmlPath).createUnmarshaller();
+            Object o = unmarsh.unmarshal(null)
         } catch (JAXBException ex)
         {
             System.out.println(ex.toString());
