@@ -42,9 +42,6 @@ public class StartGUI extends javax.swing.JFrame
         jLabel2 = new javax.swing.JLabel();
         paLogo = new javax.swing.JPanel();
         laLogo = new javax.swing.JLabel();
-        mbStartGUI = new javax.swing.JMenuBar();
-        mDatei = new javax.swing.JMenu();
-        mBearbeiten = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -104,14 +101,6 @@ public class StartGUI extends javax.swing.JFrame
         paLogo.add(laLogo, java.awt.BorderLayout.CENTER);
 
         getContentPane().add(paLogo, java.awt.BorderLayout.CENTER);
-
-        mDatei.setText("Datei");
-        mbStartGUI.add(mDatei);
-
-        mBearbeiten.setText("Bearbeiten");
-        mbStartGUI.add(mBearbeiten);
-
-        setJMenuBar(mbStartGUI);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -180,9 +169,6 @@ public class StartGUI extends javax.swing.JFrame
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel laLogo;
-    private javax.swing.JMenu mBearbeiten;
-    private javax.swing.JMenu mDatei;
-    private javax.swing.JMenuBar mbStartGUI;
     private javax.swing.JPanel paLogo;
     private javax.swing.JPanel paStartOptionen;
     // End of variables declaration//GEN-END:variables

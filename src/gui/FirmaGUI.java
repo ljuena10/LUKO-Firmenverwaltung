@@ -168,7 +168,9 @@ public class FirmaGUI extends javax.swing.JFrame implements Runnable
 
     private void onVerwaltung(java.awt.event.ActionEvent evt)//GEN-FIRST:event_onVerwaltung
     {//GEN-HEADEREND:event_onVerwaltung
-        // TODO add your handling code here:
+        VerwaltungGUI verwaltungGUI = new VerwaltungGUI();
+        verwaltungGUI.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_onVerwaltung
 
     /**
