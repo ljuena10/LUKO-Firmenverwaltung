@@ -5,6 +5,7 @@ import bl.FirmaTableModel;
 import bl.FirmaTableRenderer;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -168,9 +169,15 @@ public class FirmaGUI extends javax.swing.JFrame implements Runnable
 
     private void onVerwaltung(java.awt.event.ActionEvent evt)//GEN-FIRST:event_onVerwaltung
     {//GEN-HEADEREND:event_onVerwaltung
-        VerwaltungGUI verwaltungGUI = new VerwaltungGUI();
-        verwaltungGUI.setVisible(true);
-        this.dispose();
+        if(taFirmen.getSelectedRow()>=0)
+        {
+            VerwaltungGUI verwaltungGUI = new VerwaltungGUI();
+            verwaltungGUI.setVisible(true);
+            this.dispose();
+        }else
+        {
+            JOptionPane.showMessageDialog(this, "Bitte wählen Sie eine Firma aus!");
+        }
     }//GEN-LAST:event_onVerwaltung
 
     /**

@@ -5,6 +5,8 @@
  */
 package gui;
 
+import java.awt.Image;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 /**
@@ -22,7 +24,7 @@ public class VerwaltungGUI extends javax.swing.JFrame
         initComponents();
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -40,12 +42,18 @@ public class VerwaltungGUI extends javax.swing.JFrame
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTree1 = new javax.swing.JTree();
+        jPanel1 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         paLogo = new javax.swing.JPanel();
         laLogo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        paOben.setLayout(new java.awt.GridLayout(1, 15));
+        paOben.setBackground(new java.awt.Color(255, 255, 255));
+        paOben.setForeground(new java.awt.Color(255, 255, 255));
+        paOben.setLayout(new java.awt.GridLayout(1, 2));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
@@ -76,6 +84,19 @@ public class VerwaltungGUI extends javax.swing.JFrame
         jScrollPane1.setViewportView(jTree1);
 
         jPanel3.add(jScrollPane1, java.awt.BorderLayout.CENTER);
+
+        jPanel1.setLayout(new java.awt.GridLayout(3, 0));
+
+        jButton1.setText("Modul Hinzufügen");
+        jPanel1.add(jButton1);
+
+        jButton2.setText("Importieren");
+        jPanel1.add(jButton2);
+
+        jButton3.setText("Exportieren");
+        jPanel1.add(jButton3);
+
+        jPanel3.add(jPanel1, java.awt.BorderLayout.SOUTH);
 
         spMainPane.setLeftComponent(jPanel3);
 
@@ -140,7 +161,11 @@ public class VerwaltungGUI extends javax.swing.JFrame
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTree jTree1;

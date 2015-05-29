@@ -37,7 +37,6 @@ public class StartGUI extends javax.swing.JFrame
         paStartOptionen = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         btStart = new javax.swing.JButton();
-        btEinstellungen = new javax.swing.JButton();
         btExit = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         paLogo = new javax.swing.JPanel();
@@ -65,12 +64,6 @@ public class StartGUI extends javax.swing.JFrame
             }
         });
         paStartOptionen.add(btStart);
-
-        btEinstellungen.setBackground(new java.awt.Color(255, 0, 0));
-        btEinstellungen.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        btEinstellungen.setForeground(new java.awt.Color(255, 255, 255));
-        btEinstellungen.setText("Einstellungen");
-        paStartOptionen.add(btEinstellungen);
 
         btExit.setBackground(new java.awt.Color(255, 0, 0));
         btExit.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -163,7 +156,6 @@ public class StartGUI extends javax.swing.JFrame
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btEinstellungen;
     private javax.swing.JButton btExit;
     private javax.swing.JButton btStart;
     private javax.swing.JLabel jLabel1;
