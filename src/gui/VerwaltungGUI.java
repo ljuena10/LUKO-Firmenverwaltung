@@ -129,12 +129,13 @@ public class VerwaltungGUI extends javax.swing.JFrame
     }//GEN-LAST:event_btModulAddActionPerformed
 
     private void btExportierenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExportierenActionPerformed
-//        try {
-            System.out.println(treeModule.getSelectionPath().toString());
-            //xmlCreator.createXMLFile(treeModule.getSelectionPath().toString());
-//        } catch (ParserConfigurationException ex) {
-//            Logger.getLogger(VerwaltungGUI.class.getName()).log(Level.SEVERE, null, ex);
-//        }
+        try {
+            String [] moduls = treeModule.getSelectionPath().toString().split(",");
+            String modulName = moduls[1].replace("]", "");
+            xmlCreator.createXMLFile(modulName);
+        } catch (ParserConfigurationException ex) {
+            Logger.getLogger(VerwaltungGUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_btExportierenActionPerformed
 
     /**
