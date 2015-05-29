@@ -132,7 +132,7 @@ public class VerwaltungGUI extends javax.swing.JFrame
         try {
             String [] moduls = treeModule.getSelectionPath().toString().split(",");
             String modulName = moduls[1].replace("]", "");
-            xmlCreator.createXMLFile(modulName);
+            xmlCreator.createXMLFile(modulName+".xml");
         } catch (ParserConfigurationException ex) {
             Logger.getLogger(VerwaltungGUI.class.getName()).log(Level.SEVERE, null, ex);
         }
